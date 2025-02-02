@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <div class="header">
+        <h1>Product List</h1>
+        <div class="cart-info" id="cart-info">
+          <span>Cart (<span id="cart-count">0</span>)</span>
+        </div>
+      </div>
+
+      <div class="filters">
+        <select id="categoryFilter">
+          <option value="">All Categories</option>
+          <option value="electronics">Electronics</option>
+          <option value="clothing">Clothing</option>
+          <option value="appliances">Appliances</option>
+        </select>
+        <button id="resetFilters">Reset Filters</button>
+      </div>
+
+      <div id="product-list" class="product-list"></div>
+
+      <div id="product-details" class="product-details" style="display: none">
+        <div class="slider-container">
+          <img id="product-detail-image" src="" alt="Product Image" />
+          <button class="slider-button prev" onclick="changeImage(-1)">
+            &#10094;
+          </button>
+          <button class="slider-button next" onclick="changeImage(1)">
+            &#10095;
+          </button>
+        </div>
+        <h2 id="product-detail-title"></h2>
+        <p id="product-detail-description"></p>
+        <p id="product-detail-price"></p>
+        <button id="addToCartBtn">Add to Cart</button>
+        <button id="backToProductsBtn">Back to Products</button>
+      </div>
+
+      <div id="cart" class="cart" style="display: none">
+        <h2>Cart</h2>
+        <div id="cart-items"></div>
+        <p>Total: ₹<span id="total-price">0.00</span></p>
+        <button id="backToProductsFromCartBtn">Back to Products</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
